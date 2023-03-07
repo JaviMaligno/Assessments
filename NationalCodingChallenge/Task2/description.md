@@ -1,0 +1,1 @@
+Using Flask, create an endpoint `"/users"` that takes a `GET` request and always returns a 200 response. The endpoint should accept a query parameter `"name"`. If this parameter is given, the payload should contain all users that have the given name. If it is not given, it should return the whole list of users. 
