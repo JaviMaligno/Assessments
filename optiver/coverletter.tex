@@ -1,0 +1,197 @@
+\documentclass{article}
+\usepackage{amsmath,accents}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{setspace}  
+\usepackage{amsthm}
+\usepackage{nccmath}
+\usepackage[UKenglish]{babel}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{listings}
+
+\theoremstyle{plain}
+
+\renewcommand{\baselinestretch}{1,4}
+\setlength{\oddsidemargin}{0.5in}
+\setlength{\evensidemargin}{0.5in}
+\setlength{\textwidth}{5.4in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\headheight}{0.5in}
+\setlength{\headsep}{0.6in}
+\setlength{\textheight}{8in}
+\setlength{\footskip}{0.75in}
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{propi}[theorem]{Propiedades}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{coro}[theorem]{Corolario}
+\newtheorem{criterion}{Criterion}
+\newtheorem{defi}[theorem]{Definición}
+\newtheorem{example}[theorem]{Ejemplo}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{nota}[theorem]{Nota}
+\newtheorem{sol}{Solución}
+\newtheorem*{sol*}{Solution}
+\newtheorem{prop}[theorem]{Proposición}
+\newtheorem{remark}{Remark}
+
+\newtheorem{dem}[theorem]{Demostración}
+
+\newtheorem{summary}{Summary}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\ninf}[1]{\norm{#1}_\infty}
+\providecommand{\numn}[1]{\norm{#1}_1}
+\providecommand{\gabs}[1]{\left|{#1}\right|}
+\newcommand{\bor}[1]{\mathcal{B}(#1)}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\X}{\chi}
+\providecommand{\Zn}[1]{\Z / \Z #1}
+\newcommand{\resi}{\varepsilon_L}
+\newcommand{\cee}{\mathbb{C}}
+\providecommand{\conv}[1]{\overset{#1}{\longrightarrow}}
+\providecommand{\gene}[1]{\langle{#1}\rangle}
+\providecommand{\convcs}{\xrightarrow{CS}}
+% xrightarrow{d}[d]
+\setcounter{exercise}{0}
+\newcommand{\cicl}{\mathcal{C}}
+
+\newenvironment{ejercicio}[2][Estado]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries Ejercicio}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+%--------------------------------------------------------
+\begin{document}
+
+\title{Cover Letter for Graduate Quantitave Researcher at Optiver}
+\author{Javier Aguilar Martín}
+\date{\today}
+\maketitle
+\section{Cover Letter}
+
+Dear recruiter,
+
+I am writing regarding the position as Graduate Quantitave Researcher. I saw these position through my university career services and thought that it could be ideal for me since I have a passion for Data and Quantitative Analysis, as well as for coding. This position seems to combine both worlds in a very exciting way.
+
+I have more than 5 years of experience learning and teaching Python. In this period I have become familiar with Data Analysis and Machine Learning tools. This includes libraries such as Numpy, Pandas, SciPy, Matplotlib, Seaborn and others. I am also familiar with R and have used SQL and NoSQL databases. 
+
+Even though my PhD is in pure Mathematics, I have taken every opportunity I have had to develop my programming and statistical skills, for instance statistically testing some results, participating in coding contests and attending multiple workshops and courses about Bayesian methods, Machine Learning, Data Science and programming. I have also gained some intersectional skills that I believe are valuable for this job, such as communication and presentation skills, and great learning abilities, as well as team working.
+
+As you can see I am not afraid of working in different disciplines. In fact, as a GTA I have worked closely with mathematical models coming from finance and house market, and with many numerical tools used in different fields, as well as with Machine Learning tools. My intention is indeed to gradually move from pure to applied Mathematics, so the skills and training that this position offers are very valuable to me. I am always very keen to learn new things, so I believe this job and I are a perfect match.
+
+As I am in my final PhD year I am looking to start a new career in September, and this company seems to provide a very exciting environment to do it.
+
+I hope you find well this letter, I am looking forward to hearing from you.
+
+Yours sincerely,
+Javier
+
+\section{Problems}
+
+\begin{exercise}
+An ant leaves its anthill in order to forage for food. It moves with the speed of 10cm per second, but it doesn't know where to go, therefore every second it moves randomly 10cm directly north, south, east or west with equal probability.
+\begin{enumerate}
+  \item If the food is located on east-west lines 20cm to the north and 20cm to the south, as well as on north-south lines 20cm to the east and 20cm to the west from the anthill, how long will it take the ant to reach it on average?
+  \item What is the average time the ant will reach food if it is located only on a diagonal line passing through (10cm, 0cm) and (0cm, 10cm) points?
+  \item Can you write a program that comes up with an estimate of average time to find food for any closed boundary around the anthill? What would be the answer if food is located outside an defined by $ (x - 2.5cm) / 30cm )^2 + ( (y - 2.5cm) / 40cm )^2 < 1$ in coordinate system where the anthill is located at $(x = 0cm, y = 0cm$)? Provide us with a solution rounded to the nearest integer.
+\end{enumerate}
+\end{exercise}
+\begin{sol*}\
+  \begin{enumerate}
+    \item If we take the anthill to be at the origin of the coordinate system, the food is located in the boundary of a square of side 40cm centered at the origin. %as the picture below shows.
+  
+
+    Notice that the probability of going from $(0,0)$ to any of $(\pm 1,0)$ or $(0, \pm 1)$ is 1, i.e. we always move from the origin to one of the points in $(\pm 1,0)$ or $(0, \pm 1)$. Once you are on any of this points, there are three possibilities:
+    \begin{enumerate}[(i)]
+      \item reach the food in the next step,
+      \item reach the food after two steps,
+      \item return to one of those points in two steps.
+    \end{enumerate}
+    Let $Z$ be the number of steps required to reach the food from any of the points $(\pm 1,0)$ or $(0, \pm 1)$. Taking into account that each step has the same probability, the above cases lead us to the following expression for the expected value of $Z$
+    \[E(Z) = \frac{1}{4}\times 1 + \frac{1}{4}\times 2 + \frac{1}{2}(2+E(Z))\]
+    Solving this equation gives us $E(Z) = \frac{7}{2}$. Since we need to start at the origin, we have to add one extra step, so the answer is $\frac{9}{2}=4.5$ steps.
+
+    \item We are going to show a more general result, namely, if the food is located in the line defined by the equation $y = 10 - x$, then the expected number of steps in order to reach it is infinite. Since the food is contained in this line, it will follow that the expected amount of time to reach the food is infinite.
+    Let $X_n$ represent the random walk done by the ant, i.e. $X_n$ is the position of the ant after $n$ steps. Let us define the variable $Y_n$ as the vertical displacement between $X_n$ and the line $y=10-x$. This means that if $X_n=(x,y)$ then $Y_n = 10 - x - y$. Since $X_0=(0,0)$, we have $Y_0 = 1$, and more generally
+    \[
+    Y_{n+1} = \left\{ \begin{matrix}
+      Y_n + 1 & \text{with probability }\frac{1}{2},\\
+      Y_n - 1 & \text{with probability }\frac{1}{2}.
+    \end{matrix}
+    \right.  
+    \]
+    This is a simple random walk on the integers, which is known to have infinite expected number of steps to hit any value, in particular 0, which corresponds to the ant hitting the line.
+    
+    A possible intuitive explanation is that the further we are from the food, the more amount of steps are we expected to take. So if we compute the average over all the infinitely many possitions that are increasingly further away from the food, the resulting sum will diverge. This would not happen for a closed boundary since the distance to the boundary is bounded.
+    \item The following Python program estimes the expected number of steps for any closed boundary given as a boundary condition. 
+
+
+\lstset{language=Python,
+showstringspaces=false,
+tab=\rightarrowfill}
+\begin{lstlisting}
+  import numpy as np
+  from collections import defaultdict
+  start = (0,0)
+  initial_state = {start: 1}
+  moves = dict(zip([(1,0), (-1,0), (0,1), (0,-1)], [0.25]*4))
+  n_steps = 200
+  
+  square_condition = lambda x,y: np.linalg.norm((x,y), np.inf) == 2
+  ellipse_condition = lambda x,y: ((x - 2.5)/30)**2 + ((y - 2.5)/40)**2 >= 1
+  
+  def simulate_one_step(current_states):
+      newStates = defaultdict(float)
+      for cur_pos, prob_of_being_here in current_states.items():
+          for movement_dir,prob_of_moving_this_way in moves.items():
+              newState = tuple(np.array(cur_pos)+np.array(movement_dir))
+              newStates[newState] += prob_of_being_here*prob_of_moving_this_way
+      return newStates
+  
+  def simulate_paths(initial_state, n_steps, boundary_condition):
+      states = initial_state
+      average_num_moves = 0
+      for step in range(1,n_steps):
+          states = simulate_one_step(states)
+          boundary_chances = 0
+          for pos, prob in set(states.items()):    
+              if boundary_condition(*pos):
+                  boundary_chances += prob
+                  del states[pos]
+          average_num_moves += step * boundary_chances
+      return round(average_num_moves)
+\end{lstlisting}
+It works by generating all possible states after $n$ steps, together with their corresponding probabilities. Once the boundary has been transversed, this state is used to compute the expcted value and then deleted. When we tested the code for the square condition (corresponding to the first exercise), the algorithm converged after 200 steps to the exact solution 4.5. However, the rounding outputs 4 (by default .5 is rounded below for even integers for statistical reasons). For the ellipse of this exercise it took a longer time to converge, requiring at least 8000 steps, but giving 1164 steps as the expected value.
+ 
+% As one can check, the output is
+% \begin{verbatim}
+% >>> All values are valid probabilities.
+% The probabilities add up to 1.
+% Expected value: 2.580645161290322
+% \end{verbatim}
+\end{enumerate}
+\end{sol*}
+
+
+
+\end{document}
