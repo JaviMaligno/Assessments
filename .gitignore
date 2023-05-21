@@ -57,3 +57,11 @@ rsconnect/
 *.vrb
 *.pyc
 Practice/
+*.pptx
+*.zip
+
+# Specific to GSK
+step_up_with_r.html
+draft.ipynb
+
+
