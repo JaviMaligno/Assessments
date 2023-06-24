@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from data_utils import results
 app = Flask(__name__)
 #app.config["EXPLAIN_TEMPLATE_LOADING"] = True
@@ -6,9 +6,13 @@ app = Flask(__name__)
 def input_patient():
    return render_template('input_patient.html')
 
-def return_results(age, height, weight, sex):
-    data_drug, n_drug, data_control, n_control = results(age,height,weight,sex)
-    #create a template that takes contains 2 tables, one for control and another one for drug. 
+@app.route('/result', methods = ["POST"])
+def return_results():
+    if request.method == "POST":
+        age, weight, height, sex = request.form.values()
+        age, height, weight = float(age), float(height), float(weight)
+    n_control, data_control, n_drug, data_drug = results(age,height,weight,sex)
+    #create a template that contains 2 tables, one for control and another one for drug. 
     #each of them under a title and a sentence saying how many similar patients were found in each.
     #fill the table with percentages for each combination of response and ae
     #should I include 0? 

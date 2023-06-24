@@ -1,0 +1,49 @@
+<h2>Results of Similar Patients</h2>
+<p>The following two tables show how many similar patients were found in both control and drug group, and data about response and adverse effects.</p>
+
+<h3>Similar control patinets</h3>
+
+We found {{n_control}} patients with similar characteristics in the control group. 
+
+<br>
+
+<tableborder=1, style="border-collapse:collapse ;">
+{% for key, value in data_control.items() %}
+    <tr>
+    {% if key == "NN" %}
+        <th> "No response and no side effects" </th>
+    {% elif key == "NY" %}
+        <th> "No response and side effects" </th>
+    {% elif key == "YN" %}
+        <th> "Response and no side effects" </th>
+    {% elif key == "YY" %}
+        <th> "Response and side effects" </th>
+    {% endif %}
+       <td> {{ value }} % </td>
+    </tr>
+{% endfor %}
+</table>
+
+
+<h3>Similar drug patinets</h3>
+
+We found {{n_drug}} patients with similar characteristics in the drug group. 
+
+<br>
+
+<table border=1, style="border-collapse:collapse ;"> 
+{% for key, value in data_drug.items() %}
+    <tr>
+    {% if key == "NN" %}
+        <th> No response and no side effects </th>
+    {% elif key == "NY" %}
+        <th> No response and side effects </th>
+    {% elif key == "YN" %}
+        <th> Response and no side effects </th>
+    {% elif key == "YY" %}
+        <th> Response and side effects </th>
+    {% endif %}
+       <td> {{ value }} % </td>
+    </tr>
+{% endfor %}
+</table>
